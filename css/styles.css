@@ -64,6 +64,7 @@ a:active {
 .gamePage p {
   text-align: left;
   padding: 25px;
+  width: 50%;
   display: inline-block;
 }
 
@@ -140,6 +141,7 @@ nav a:hover::before {
   margin: 1%;
   width: 30%;
 }
+
 footer {
 	margin: 0 auto;
   text-align: center;
