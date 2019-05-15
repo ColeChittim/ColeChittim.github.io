@@ -11,6 +11,16 @@ body {
 	font-weight: 800;
 }
 
+a:link{
+  color: rgb(223, 153, 141);
+}
+a:visited {
+  color: rgb(223, 153, 141);
+}
+a:active {
+  color: rgb(223, 153, 141);
+}
+
 .container {
   width: 70%;
   text-align: center;
