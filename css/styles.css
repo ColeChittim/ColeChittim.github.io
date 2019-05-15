@@ -33,6 +33,7 @@ body {
 
 .sectionContainer p {
   text-align: left;
+  padding: 25px;
   display: inline-block;
 }
 
@@ -52,6 +53,7 @@ body {
 
 .gamePage p {
   text-align: left;
+  padding: 25px;
   display: inline-block;
 }
 
