@@ -133,6 +133,7 @@ nav a:hover::before {
 
 .work{
   width: 85%;
+  padding: 100px;
   text-align: center;
 	margin: 0 auto;
 }
