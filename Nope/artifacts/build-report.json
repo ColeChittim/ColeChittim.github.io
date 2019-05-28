@@ -171,7 +171,7 @@
             "Item": {
                 "Name": "TinyExport/Nope/html5/release/build/entities.js",
                 "Size": 57198,
-                "CompressedSize": 7125
+                "CompressedSize": 7122
             },
             "Children": [{
                 "Item": {
@@ -207,7 +207,7 @@
                 "Item": {
                     "Name": "ScoreParticles",
                     "Size": 4820,
-                    "CompressedSize": 1224
+                    "CompressedSize": 1223
                 }
             }, {
                 "Item": {
@@ -231,14 +231,14 @@
         }, {
             "Item": {
                 "Name": "TinyExport/Nope/html5/release/build/code.js",
-                "Size": 52330,
-                "CompressedSize": 8358
+                "Size": 52760,
+                "CompressedSize": 8410
             },
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/Nope/html5/release/artifacts/scripts/tsc-emit.js",
-                    "Size": 52250,
-                    "CompressedSize": 8283
+                    "Size": 52680,
+                    "CompressedSize": 8334
                 }
             }]
         }, {

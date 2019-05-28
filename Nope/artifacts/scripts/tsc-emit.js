@@ -438,6 +438,13 @@ var game;
             this.clear(world);
             // create a new game scene and score
             ut.EntityGroup.instantiate(world, this.kGameSceneName);
+            //Add particles
+            var particles = Utils.Spawn(world, "game.TapParticles", new Vector3(0, 0, 0));
+            if (world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {
+                var scale = world.getComponentData(particles, ut.Core2D.TransformLocalScale);
+                scale.scale = new Vector3(.07, .07, .07);
+                world.setComponentData(particles, scale);
+            }
             // setup the initial state for the game
             var config = world.getConfigData(game.GameConfig);
             config.currentScore = 0;

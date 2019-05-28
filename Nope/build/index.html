@@ -3136,21 +3136,21 @@ var UT_ASSETS_SETUP = function(world) {
     world.setEntityName(e99, "assets/textures/sactx-256x128-Uncompressed-Gems-476e6708");
     var arch4 = world.createArchetype(ut.Interpolation.BezierCurveFloat)
     var e100 = world.createEntity(arch4);
-    world.setEntityName(e100, "assets/curves/fb536e2bbe7d4f5388c0af38d0c850db");
+    world.setEntityName(e100, "assets/curves/c6658548d9e34e7b91a7f7d2f7ced4c9");
     var arch5 = world.createArchetype(ut.Interpolation.StepCurveColor)
     var e101 = world.createEntity(arch5);
-    world.setEntityName(e101, "assets/gradients/e2b455a299f94b0d8a27fd1bcd40d971");
+    world.setEntityName(e101, "assets/gradients/2f213be40c5b4657b4b01e747f6ba227");
     var arch6 = world.createArchetype(ut.Interpolation.BezierCurveVector3)
     var e102 = world.createEntity(arch6);
-    world.setEntityName(e102, "assets/curves/7562fe4cbb4d4237a8b44a2e16a7a3a9");
+    world.setEntityName(e102, "assets/curves/46695449124b4400a5ffbf3de7f6a137");
     var e103 = world.createEntity(arch6);
-    world.setEntityName(e103, "assets/curves/f5782a8a89f84d11a46f415141135ecd");
+    world.setEntityName(e103, "assets/curves/a021f65c356c40d2bc491b31ae393f78");
     var e104 = world.createEntity(arch4);
-    world.setEntityName(e104, "assets/curves/1d59c0ea982a40908aa744353798a3cc");
+    world.setEntityName(e104, "assets/curves/195cb20e852d43b09be1410ce8699e7e");
     var e105 = world.createEntity(arch5);
-    world.setEntityName(e105, "assets/gradients/f2e3c88ac42f4d2d8bfc1d4906d39ac9");
+    world.setEntityName(e105, "assets/gradients/80aeb6d03e3c46499aa01b7e4141973e");
     var e106 = world.createEntity(arch4);
-    world.setEntityName(e106, "assets/curves/def6dc08a7d143c9b9771b2f10c00ede");
+    world.setEntityName(e106, "assets/curves/2ee93ccc248044ec8801c1348639601e");
     var c0 = new ut.Core2D.Sprite2D();
     c0.image = e96;
     var s0 = new ut.Math.Rect();
@@ -5574,7 +5574,7 @@ entities.game.GameScene.load = function(world) {
     a0[4] = ut.EntityLookupCache.getByName(world, 'assets/sprites/Nope_Frame1');
     a0[5] = ut.EntityLookupCache.getByName(world, 'assets/sprites/Nope_Frame2');
     c1.sprites = a0;
-    c1.frameRate = 6;
+    c1.frameRate = 4;
     world.setComponentData(e0, c1);
     var c2 = new ut.Core2D.Sprite2DSequencePlayer();
     c2.sequence = e0;
@@ -5586,7 +5586,7 @@ entities.game.GameScene.load = function(world) {
     s1.x = -0.08;
     s1.y = -0.08;
     s1.width = 0.18;
-    s1.height = 0.18;
+    s1.height = 0.15;
     c3.box = s1;
     world.setComponentData(e0, c3);
     var c4 = new game.PlayerInput();
@@ -5951,10 +5951,10 @@ entities.game.ScoreParticles.load = function(world) {
     c5.angle = s4;
     world.setComponentData(e0, c5);
     var c6 = new ut.Particles.LifetimeScale();
-    c6.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/fb536e2bbe7d4f5388c0af38d0c850db');
+    c6.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/c6658548d9e34e7b91a7f7d2f7ced4c9');
     world.setComponentData(e0, c6);
     var c7 = new ut.Particles.LifetimeColor();
-    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/e2b455a299f94b0d8a27fd1bcd40d971');
+    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/2f213be40c5b4657b4b01e747f6ba227');
     world.setComponentData(e0, c7);
     var c8 = new ut.Particles.BurstEmission();
     var s5 = new ut.Math.Range();
@@ -5977,7 +5977,7 @@ entities.game.ScoreParticles.load = function(world) {
     c10.Delay = 1;
     world.setComponentData(e0, c10);
     var c11 = new ut.Particles.LifetimeVelocity();
-    c11.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/7562fe4cbb4d4237a8b44a2e16a7a3a9');
+    c11.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/46695449124b4400a5ffbf3de7f6a137');
     world.setComponentData(e0, c11);
     var c12 = new ut.Particles.EmitterCircleSource();
     var s8 = new ut.Math.Range();
@@ -6049,8 +6049,8 @@ entities.game.TapParticles.load = function(world) {
     world.setComponentData(e0, c1);
     var c2 = new ut.Core2D.TransformLocalScale();
     var s1 = new ut.Math.Vector3();
-    s1.x = 0.02;
-    s1.y = 0.02;
+    s1.x = 0.07;
+    s1.y = 0.07;
     s1.z = 0.02;
     c2.scale = s1;
     world.setComponentData(e0, c2);
@@ -6072,7 +6072,7 @@ entities.game.TapParticles.load = function(world) {
     c4.attachToEmitter = true;
     world.setComponentData(e0, c4);
     var c5 = new ut.Particles.LifetimeVelocity();
-    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/f5782a8a89f84d11a46f415141135ecd');
+    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/a021f65c356c40d2bc491b31ae393f78');
     world.setComponentData(e0, c5);
     var c6 = new ut.Particles.EmitterInitialRotation();
     var s4 = new ut.Math.Range();
@@ -6081,10 +6081,10 @@ entities.game.TapParticles.load = function(world) {
     c6.angle = s4;
     world.setComponentData(e0, c6);
     var c7 = new ut.Particles.LifetimeScale();
-    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/1d59c0ea982a40908aa744353798a3cc');
+    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/195cb20e852d43b09be1410ce8699e7e');
     world.setComponentData(e0, c7);
     var c8 = new ut.Particles.LifetimeColor();
-    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/f2e3c88ac42f4d2d8bfc1d4906d39ac9');
+    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/80aeb6d03e3c46499aa01b7e4141973e');
     world.setComponentData(e0, c8);
     var c9 = new ut.Particles.BurstEmission();
     var s5 = new ut.Math.Range();
@@ -6114,7 +6114,7 @@ entities.game.TapParticles.load = function(world) {
     c11.angularVelocity = s9;
     world.setComponentData(e0, c11);
     var c12 = new ut.Particles.LifetimeAngularVelocity();
-    c12.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/def6dc08a7d143c9b9771b2f10c00ede');
+    c12.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/2ee93ccc248044ec8801c1348639601e');
     world.setComponentData(e0, c12);
     var c13 = new ut.Particles.EmitterInitialScale();
     var s10 = new ut.Math.Range();
@@ -6737,6 +6737,13 @@ var game;
             this.clear(world);
             // create a new game scene and score
             ut.EntityGroup.instantiate(world, this.kGameSceneName);
+            //Add particles
+            var particles = Utils.Spawn(world, "game.TapParticles", new Vector3(0, 0, 0));
+            if (world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {
+                var scale = world.getComponentData(particles, ut.Core2D.TransformLocalScale);
+                scale.scale = new Vector3(.07, .07, .07);
+                world.setComponentData(particles, scale);
+            }
             // setup the initial state for the game
             var config = world.getConfigData(game.GameConfig);
             config.currentScore = 0;
