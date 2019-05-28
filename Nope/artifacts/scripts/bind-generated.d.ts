@@ -474,6 +474,7 @@ declare namespace ut{
             GameScene: EntityGroupData;
             Gem: EntityGroupData;
             Score: EntityGroupData;
+            ScoreParticles: EntityGroupData;
             TapParticles: EntityGroupData;
             Tutorial: EntityGroupData;
         }

@@ -304,6 +304,36 @@ var game;
                     game.AudioService.playAudioSourceByName(_this.world, 'audio/sfx_hit');
                     // fix: defer the game over call until after iteration
                     gameOver = true;
+                    //Add particles
+                    var transformPos = _this.world.getComponentData(entity, ut.Core2D.TransformLocalPosition);
+                    var particles = Utils.Spawn(_this.world, "game.TapParticles", transformPos.position);
+                    if (_this.world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {
+                        var scale = _this.world.getComponentData(particles, ut.Core2D.TransformLocalScale);
+                        scale.scale = new Vector3(0.01, 0.01, 0.01);
+                        _this.world.setComponentData(particles, scale);
+                    }
+                    var transform = _this.world.getComponentData(entity, ut.Core2D.TransformLocalScale);
+                    ut.Tweens.TweenService.addTween(_this.world, entity, // on which entity
+                    ut.Core2D.TransformLocalScale.scale.x, // what component + field
+                    transform.scale.x, transform.scale.x + .25, // from -> to 
+                    0.1, // duration 
+                    0, // start time offset
+                    ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
+                    );
+                    ut.Tweens.TweenService.addTween(_this.world, entity, // on which entity
+                    ut.Core2D.TransformLocalScale.scale.x, // what component + field
+                    transform.scale.x, transform.scale.x - transform.scale.x, // from -> to 
+                    0.4, // duration 
+                    0, // start time offset
+                    ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
+                    );
+                    ut.Tweens.TweenService.addTween(_this.world, entity, // on which entity
+                    ut.Core2D.TransformLocalScale.scale.y, // what component + field
+                    transform.scale.y, transform.scale.y - transform.scale.y, // from -> to 
+                    0.3, // duration 
+                    0, // start time offset
+                    ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
+                    );
                 }
             });
             if (gameOver) {
@@ -408,7 +438,8 @@ var game;
             var player = world.getEntityByName(this.kPlayerEntityName);
             var gameConfig = world.getConfigData(game.GameConfig);
             // stop all tweens from tutorial
-            ut.Tweens.TweenService.removeAllTweensInWorld(world);
+            ut.Tweens.TweenService.removeAllEndedTweens(world);
+            ut.Tweens.TweenService.removeAllTweens(world, player);
             gameConfig.state = game.GameState.Play;
             world.setConfigData(gameConfig);
             ut.EntityGroup.instantiate(world, this.kScoreSceneName);
@@ -477,7 +508,7 @@ var game;
             if (!this.world.exists(game.GemSpawnerSystem.gem)) {
                 var x = game.GemSpawnerSystem.lastSpot;
                 while (x == game.GemSpawnerSystem.lastSpot)
-                    x = Math.floor(Utils.GetRandom(0, 5));
+                    x = Math.floor(Utils.GetRandom(0, 3));
                 var loc = new Vector3();
                 switch (x) {
                     case 0:
@@ -498,9 +529,42 @@ var game;
                 }
                 game.GemSpawnerSystem.lastSpot = x;
                 game.GemSpawnerSystem.gem = Utils.Spawn(this.world, "game.Gem", loc);
+                var transformPos = this.world.getComponentData(game.GemSpawnerSystem.gem, ut.Core2D.TransformLocalPosition);
+                ut.Tweens.TweenService.addTween(this.world, game.GemSpawnerSystem.gem, // on which entity
+                ut.Core2D.TransformLocalPosition.position.y, // what component + field
+                transformPos.position.y, transformPos.position.y + 0.05, // from -> to 
+                0.8, // duration 
+                0, // start time offset
+                ut.Core2D.LoopMode.PingPong, ut.Tweens.TweenFunc.InOutQuad, false // remove tween when done (ignored when looping)
+                );
+                var transform = this.world.getComponentData(game.GemSpawnerSystem.gem, ut.Core2D.TransformLocalScale);
+                ut.Tweens.TweenService.addTween(this.world, game.GemSpawnerSystem.gem, // on which entity
+                ut.Core2D.TransformLocalScale.scale.x, // what component + field
+                0, .8, // from -> to 
+                0.06, // duration 
+                0, // start time offset
+                ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
+                );
+                ut.Tweens.TweenService.addTween(this.world, game.GemSpawnerSystem.gem, // on which entity
+                ut.Core2D.TransformLocalScale.scale.x, // what component + field
+                0, 0.6, // from -> to 
+                0.01, // duration 
+                0, // start time offset
+                ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
+                );
+                ut.Tweens.TweenService.addTween(this.world, game.GemSpawnerSystem.gem, // on which entity
+                ut.Core2D.TransformLocalScale.scale.y, // what component + field
+                0, .6, // from -> to 
+                0.07, // duration 
+                0, // start time offset
+                ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
+                );
             }
-            if (!this.world.hasComponent(game.GemSpawnerSystem.gem, ut.HitBox2D.RectHitBox2D)) {
-                this.world.destroyEntity(game.GemSpawnerSystem.gem);
+            else {
+                var transform = this.world.getComponentData(game.GemSpawnerSystem.gem, ut.Core2D.TransformLocalScale);
+                if (transform.scale.x <= 0 && transform.scale.y <= 0) {
+                    ut.EntityGroup.destroyAll(this.world, "game.Gem");
+                }
             }
         };
         return GemSpawnerSystem;
@@ -582,7 +646,7 @@ var game;
                 var particles = Utils.Spawn(_this.world, "game.TapParticles", touch);
                 if (_this.world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {
                     var scale = _this.world.getComponentData(particles, ut.Core2D.TransformLocalScale);
-                    scale.scale = new Vector3(0.02, 0.02, 0.02);
+                    scale.scale = new Vector3(0.005, 0.005, 0.005);
                     _this.world.setComponentData(particles, scale);
                 }
             });
@@ -596,10 +660,10 @@ var game;
                 }
                 else {
                     var cameraShakePlayer = new game.ShakeAnimationPlayer();
-                    cameraShakePlayer.Duration = 0.15;
+                    cameraShakePlayer.Duration = 0.125;
                     cameraShakePlayer.StartDelay = 0;
-                    cameraShakePlayer.ShakeRadiusX = 0.1;
-                    cameraShakePlayer.ShakeRadiusY = 0.1;
+                    cameraShakePlayer.ShakeRadiusX = 0.07;
+                    cameraShakePlayer.ShakeRadiusY = 0.07;
                     this.world.addComponentData(cameraEntity, cameraShakePlayer);
                 }
             }
@@ -684,27 +748,40 @@ var game;
             this.world.forEach([ut.Entity, game.PlayerInput, ut.HitBox2D.HitBoxOverlapResults, ut.Core2D.Sprite2DSequencePlayer], function (entity, input, overlap, sequencePlayer) {
                 if (_this.world.hasComponent(overlap.overlaps[0].otherEntity, game.ScorePoint)) {
                     gameConfig.currentScore = gameConfig.currentScore + 1;
+                    _this.world.removeComponent(overlap.overlaps[0].otherEntity, game.ScorePoint);
                     _this.world.removeComponent(overlap.overlaps[0].otherEntity, ut.HitBox2D.RectHitBox2D);
-                    _this.world.removeComponent(overlap.overlaps[0].otherEntity, ut.Core2D.Sprite2DRenderer);
                     // play score point sound
                     game.AudioService.playAudioSourceByName(_this.world, 'audio/sfx_point');
-                    //Shake camera
-                    var cameraEntity = _this.world.getEntityByName("Camera");
-                    if (_this.world.exists(cameraEntity)) {
-                        if (_this.world.hasComponent(cameraEntity, game.ShakeAnimationPlayer)) {
-                            var shakePlayer = _this.world.getComponentData(cameraEntity, game.ShakeAnimationPlayer);
-                            shakePlayer.Timer = 0;
-                            _this.world.setComponentData(cameraEntity, shakePlayer);
-                        }
-                        else {
-                            var cameraShakePlayer = new game.ShakeAnimationPlayer();
-                            cameraShakePlayer.Duration = 0.1;
-                            cameraShakePlayer.StartDelay = 0;
-                            cameraShakePlayer.ShakeRadiusX = 0.05;
-                            cameraShakePlayer.ShakeRadiusY = 0.05;
-                            _this.world.addComponentData(cameraEntity, cameraShakePlayer);
-                        }
+                    //Add particles
+                    var transformPos = _this.world.getComponentData(game.GemSpawnerSystem.gem, ut.Core2D.TransformLocalPosition);
+                    var particles = Utils.Spawn(_this.world, "game.ScoreParticles", transformPos.position);
+                    if (_this.world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {
+                        var scale = _this.world.getComponentData(particles, ut.Core2D.TransformLocalScale);
+                        scale.scale = new Vector3(0.01, 0.01, 0.01);
+                        _this.world.setComponentData(particles, scale);
                     }
+                    var transform = _this.world.getComponentData(overlap.overlaps[0].otherEntity, ut.Core2D.TransformLocalScale);
+                    ut.Tweens.TweenService.addTween(_this.world, overlap.overlaps[0].otherEntity, // on which entity
+                    ut.Core2D.TransformLocalScale.scale.x, // what component + field
+                    transform.scale.x, transform.scale.x + .25, // from -> to 
+                    0.1, // duration 
+                    0, // start time offset
+                    ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
+                    );
+                    ut.Tweens.TweenService.addTween(_this.world, overlap.overlaps[0].otherEntity, // on which entity
+                    ut.Core2D.TransformLocalScale.scale.x, // what component + field
+                    transform.scale.x, transform.scale.x - transform.scale.x, // from -> to 
+                    0.4, // duration 
+                    0, // start time offset
+                    ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
+                    );
+                    ut.Tweens.TweenService.addTween(_this.world, overlap.overlaps[0].otherEntity, // on which entity
+                    ut.Core2D.TransformLocalScale.scale.y, // what component + field
+                    transform.scale.y, transform.scale.y - transform.scale.y, // from -> to 
+                    0.3, // duration 
+                    0, // start time offset
+                    ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
+                    );
                 }
             });
             this.world.setConfigData(gameConfig);

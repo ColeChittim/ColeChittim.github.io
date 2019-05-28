@@ -224,6 +224,47 @@ entities.game.Score.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
 // entities.game.Score.Component is a POD type, so a JavaScript side copy constructor entities.game.Score.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
 Object.defineProperties(entities.game.Score.Component, { cid: { configurable: true, get: function() { delete entities.game.Score.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.Score.Component.cid = Module._ut_component_register_cid(/*entities.game.Score.Component*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"entities::game::Score::Component"*/, 0, 0); } } });
 Object.defineProperties(entities.game.Score.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.Score.Component.cid; } } });
+entities.game.ScoreParticles = entities.game.ScoreParticles || {};
+entities.game.ScoreParticles.Component = function() {
+};
+entities.game.ScoreParticles.Component.prototype = Object.create(null);
+entities.game.ScoreParticles.Component.prototype.constructor = entities.game.ScoreParticles.Component;
+Object.defineProperties(entities.game.ScoreParticles.Component.prototype, {
+});
+entities.game.ScoreParticles.Component._size = 1;
+entities.game.ScoreParticles.Component._fromPtr = function(ptr, v) {
+  v = v || Object.create(entities.game.ScoreParticles.Component.prototype);
+  return v;
+};
+entities.game.ScoreParticles.Component._toPtr = function(ptr, v) {
+};
+entities.game.ScoreParticles.Component._toTempHeapPtr = function(ptr, v) {
+};
+entities.game.ScoreParticles.Component._tempHeapPtr = function(v) {
+  var ptr = ut.tempHeapPtrBufferZero(1);
+  if (v) entities.game.ScoreParticles.Component._toTempHeapPtr(ptr, v);
+  return ptr;
+};
+entities.game.ScoreParticles.Component.StorageView = function(ptr) {
+  this._ptr = ptr;
+};
+entities.game.ScoreParticles.Component.StorageView.prototype = Object.create(null);
+entities.game.ScoreParticles.Component.StorageView.prototype.constructor = entities.game.ScoreParticles.Component.StorageView;
+entities.game.ScoreParticles.Component._view = entities.game.ScoreParticles.Component.StorageView;
+entities.game.ScoreParticles.Component.StorageView._isSharedComp = entities.game.ScoreParticles.Component._isSharedComp = false;
+entities.game.ScoreParticles.Component.StorageView._fromPtr = entities.game.ScoreParticles.Component._fromPtr;
+entities.game.ScoreParticles.Component.StorageView._toPtr = entities.game.ScoreParticles.Component._toPtr;
+entities.game.ScoreParticles.Component.StorageView._tempHeapPtr = entities.game.ScoreParticles.Component._tempHeapPtr;
+entities.game.ScoreParticles.Component.StorageView._size = entities.game.ScoreParticles.Component._size;
+entities.game.ScoreParticles.Component.StorageView.prototype.$advance = function() {
+  this._ptr += 1;
+};
+Object.defineProperties(entities.game.ScoreParticles.Component.StorageView.prototype, {
+});
+entities.game.ScoreParticles.Component._dtorFn = function dtor(ptr) { /* POD, no-op */ }
+// entities.game.ScoreParticles.Component is a POD type, so a JavaScript side copy constructor entities.game.ScoreParticles.Component._copyFn = function copy(src, dst) { ... } does not need to be generated for it
+Object.defineProperties(entities.game.ScoreParticles.Component, { cid: { configurable: true, get: function() { delete entities.game.ScoreParticles.Component.cid; var offsetsPtr = 0, offsetsCount = 0; return entities.game.ScoreParticles.Component.cid = Module._ut_component_register_cid(/*entities.game.ScoreParticles.Component*/ 1, 0, 0, offsetsPtr, offsetsCount, 0/*"entities::game::ScoreParticles::Component"*/, 0, 0); } } });
+Object.defineProperties(entities.game.ScoreParticles.Component.StorageView, { cid: { configurable: true, get: function() { return entities.game.ScoreParticles.Component.cid; } } });
 entities.game.TapParticles = entities.game.TapParticles || {};
 entities.game.TapParticles.Component = function() {
 };

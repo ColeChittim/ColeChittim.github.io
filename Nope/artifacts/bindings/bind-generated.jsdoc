@@ -103,6 +103,12 @@
 /**
 
 @component
+@memberof entities.game.ScoreParticles
+@name Component
+*/
+/**
+
+@component
 @memberof entities.game.TapParticles
 @name Component
 */

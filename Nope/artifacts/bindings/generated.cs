@@ -50,6 +50,12 @@ namespace entities.game
         {
         }
     }
+    namespace ScoreParticles
+    {
+        public struct Component : IComponentData
+        {
+        }
+    }
     namespace TapParticles
     {
         public struct Component : IComponentData
