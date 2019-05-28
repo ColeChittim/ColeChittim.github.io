@@ -26,7 +26,7 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 58846,
+                "Size": 57804,
                 "CompressedSize": 0
             }
         }, {
@@ -99,8 +99,8 @@
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/Nope/html5/release/artifacts/assets/Sheet.png",
-                    "Size": 16500,
-                    "CompressedSize": 8286,
+                    "Size": 16592,
+                    "CompressedSize": 8342,
                     "Object": { "$TypeId": 10, "Guid": "5e6113b4a9598134d8670f14e82e5975", "FileId": 2800000, "Type": 3 }
                 }
             }]
@@ -170,8 +170,8 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/Nope/html5/release/build/entities.js",
-                "Size": 59086,
-                "CompressedSize": 7252
+                "Size": 57198,
+                "CompressedSize": 7125
             },
             "Children": [{
                 "Item": {
@@ -194,8 +194,8 @@
             }, {
                 "Item": {
                     "Name": "Gem",
-                    "Size": 3653,
-                    "CompressedSize": 898
+                    "Size": 1756,
+                    "CompressedSize": 598
                 }
             }, {
                 "Item": {
@@ -207,12 +207,12 @@
                 "Item": {
                     "Name": "ScoreParticles",
                     "Size": 4820,
-                    "CompressedSize": 1223
+                    "CompressedSize": 1224
                 }
             }, {
                 "Item": {
                     "Name": "TapParticles",
-                    "Size": 5297,
+                    "Size": 5306,
                     "CompressedSize": 1300
                 }
             }, {
@@ -231,14 +231,14 @@
         }, {
             "Item": {
                 "Name": "TinyExport/Nope/html5/release/build/code.js",
-                "Size": 51258,
-                "CompressedSize": 8283
+                "Size": 52330,
+                "CompressedSize": 8358
             },
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/Nope/html5/release/artifacts/scripts/tsc-emit.js",
-                    "Size": 51178,
-                    "CompressedSize": 8208
+                    "Size": 52250,
+                    "CompressedSize": 8283
                 }
             }]
         }, {

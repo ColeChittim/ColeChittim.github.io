@@ -304,12 +304,29 @@ var game;
                     game.AudioService.playAudioSourceByName(_this.world, 'audio/sfx_hit');
                     // fix: defer the game over call until after iteration
                     gameOver = true;
+                    //Shake camera
+                    var cameraEntity = _this.world.getEntityByName("Camera");
+                    if (_this.world.exists(cameraEntity)) {
+                        if (_this.world.hasComponent(cameraEntity, game.ShakeAnimationPlayer)) {
+                            var shakePlayer = _this.world.getComponentData(cameraEntity, game.ShakeAnimationPlayer);
+                            shakePlayer.Timer = 0;
+                            _this.world.setComponentData(cameraEntity, shakePlayer);
+                        }
+                        else {
+                            var cameraShakePlayer = new game.ShakeAnimationPlayer();
+                            cameraShakePlayer.Duration = 0.25;
+                            cameraShakePlayer.StartDelay = 0;
+                            cameraShakePlayer.ShakeRadiusX = 0.15;
+                            cameraShakePlayer.ShakeRadiusY = 0.15;
+                            _this.world.addComponentData(cameraEntity, cameraShakePlayer);
+                        }
+                    }
                     //Add particles
                     var transformPos = _this.world.getComponentData(entity, ut.Core2D.TransformLocalPosition);
                     var particles = Utils.Spawn(_this.world, "game.TapParticles", transformPos.position);
                     if (_this.world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {
                         var scale = _this.world.getComponentData(particles, ut.Core2D.TransformLocalScale);
-                        scale.scale = new Vector3(0.01, 0.01, 0.01);
+                        scale.scale = new Vector3(0.02, 0.02, 0.02);
                         _this.world.setComponentData(particles, scale);
                     }
                     var transform = _this.world.getComponentData(entity, ut.Core2D.TransformLocalScale);
@@ -541,21 +558,21 @@ var game;
                 ut.Tweens.TweenService.addTween(this.world, game.GemSpawnerSystem.gem, // on which entity
                 ut.Core2D.TransformLocalScale.scale.x, // what component + field
                 0, .8, // from -> to 
-                0.06, // duration 
+                0.1, // duration 
                 0, // start time offset
                 ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
                 );
                 ut.Tweens.TweenService.addTween(this.world, game.GemSpawnerSystem.gem, // on which entity
                 ut.Core2D.TransformLocalScale.scale.x, // what component + field
                 0, 0.6, // from -> to 
-                0.01, // duration 
+                0.4, // duration 
                 0, // start time offset
                 ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
                 );
                 ut.Tweens.TweenService.addTween(this.world, game.GemSpawnerSystem.gem, // on which entity
                 ut.Core2D.TransformLocalScale.scale.y, // what component + field
                 0, .6, // from -> to 
-                0.07, // duration 
+                0.3, // duration 
                 0, // start time offset
                 ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.OutBounce, true // remove tween when done (ignored when looping)
                 );
@@ -646,7 +663,7 @@ var game;
                 var particles = Utils.Spawn(_this.world, "game.TapParticles", touch);
                 if (_this.world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {
                     var scale = _this.world.getComponentData(particles, ut.Core2D.TransformLocalScale);
-                    scale.scale = new Vector3(0.005, 0.005, 0.005);
+                    scale.scale = new Vector3(0.01, 0.01, 0.01);
                     _this.world.setComponentData(particles, scale);
                 }
             });
@@ -660,10 +677,10 @@ var game;
                 }
                 else {
                     var cameraShakePlayer = new game.ShakeAnimationPlayer();
-                    cameraShakePlayer.Duration = 0.125;
+                    cameraShakePlayer.Duration = 0.1;
                     cameraShakePlayer.StartDelay = 0;
-                    cameraShakePlayer.ShakeRadiusX = 0.07;
-                    cameraShakePlayer.ShakeRadiusY = 0.07;
+                    cameraShakePlayer.ShakeRadiusX = 0.05;
+                    cameraShakePlayer.ShakeRadiusY = 0.05;
                     this.world.addComponentData(cameraEntity, cameraShakePlayer);
                 }
             }
