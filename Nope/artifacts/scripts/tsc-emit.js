@@ -438,13 +438,15 @@ var game;
             this.clear(world);
             // create a new game scene and score
             ut.EntityGroup.instantiate(world, this.kGameSceneName);
-            //Add particles
-            var particles = Utils.Spawn(world, "game.TapParticles", new Vector3(0, 0, 0));
-            if (world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {
-                var scale = world.getComponentData(particles, ut.Core2D.TransformLocalScale);
-                scale.scale = new Vector3(.07, .07, .07);
-                world.setComponentData(particles, scale);
-            }
+            /*
+                  //Add particles
+                  let particles = Utils.Spawn(world,"game.TapParticles", new Vector3(0,0,0));
+                  if(world.hasComponent(particles, ut.Core2D.TransformLocalScale)){
+                    let scale = world.getComponentData(particles, ut.Core2D.TransformLocalScale);
+                    scale.scale = new Vector3(.07, .07, .07);
+                    world.setComponentData(particles, scale);
+                  }
+            */
             // setup the initial state for the game
             var config = world.getConfigData(game.GameConfig);
             config.currentScore = 0;
@@ -659,15 +661,17 @@ var game;
                 var distX = touch.x - position.position.x;
                 var distY = touch.y - position.position.y;
                 var dist = Math.sqrt(distX * distX + distY * distY);
-                console.log(distX);
-                console.log(distY);
-                //Add impulse
+                console.log(dist);
+                console.log(0.075 / dist);
+                //Add impulse             
                 if (dist != 0 && distX != 0 && distY != 0) {
                     var impulse = new ut.Physics2D.AddImpulse2D();
-                    impulse.point = new Vector2(touch.x, touch.y);
-                    impulse.impulse = new Vector2(input.force * distX / 2 * (0.075 / dist) * -1, input.force * distY / 2 * (0.075 / dist) * -1);
+                    impulse.point = new Vector2(0, 0);
+                    //Do something to the distx and disty
+                    impulse.impulse = new Vector2(input.force * distX * (0.075 / dist) * -1, input.force * distY * (0.075 / dist) * -1);
                     _this.world.addComponentData(entity, impulse);
                 }
+                console.log("Velocity y = " + _this.world.getComponentData(entity, ut.Physics2D.Velocity2D).velocity.y);
                 //Add particles
                 var particles = Utils.Spawn(_this.world, "game.TapParticles", touch);
                 if (_this.world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {

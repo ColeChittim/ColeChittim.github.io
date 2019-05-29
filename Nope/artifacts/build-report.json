@@ -26,7 +26,7 @@
         "Children": [{
             "Item": {
                 "Name": "JavaScript",
-                "Size": 57804,
+                "Size": 64254,
                 "CompressedSize": 0
             }
         }, {
@@ -99,8 +99,8 @@
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/Nope/html5/release/artifacts/assets/Sheet.png",
-                    "Size": 16592,
-                    "CompressedSize": 8342,
+                    "Size": 17652,
+                    "CompressedSize": 11520,
                     "Object": { "$TypeId": 10, "Guid": "5e6113b4a9598134d8670f14e82e5975", "FileId": 2800000, "Type": 3 }
                 }
             }]
@@ -170,8 +170,8 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/Nope/html5/release/build/entities.js",
-                "Size": 57242,
-                "CompressedSize": 7142
+                "Size": 57666,
+                "CompressedSize": 7225
             },
             "Children": [{
                 "Item": {
@@ -182,14 +182,14 @@
             }, {
                 "Item": {
                     "Name": "GameOver",
-                    "Size": 15026,
-                    "CompressedSize": 2332
+                    "Size": 15673,
+                    "CompressedSize": 2464
                 }
             }, {
                 "Item": {
                     "Name": "GameScene",
                     "Size": 5288,
-                    "CompressedSize": 1180
+                    "CompressedSize": 1183
                 }
             }, {
                 "Item": {
@@ -200,8 +200,8 @@
             }, {
                 "Item": {
                     "Name": "Score",
-                    "Size": 6322,
-                    "CompressedSize": 1206
+                    "Size": 6192,
+                    "CompressedSize": 1213
                 }
             }, {
                 "Item": {
@@ -213,13 +213,13 @@
                 "Item": {
                     "Name": "TapParticles",
                     "Size": 5306,
-                    "CompressedSize": 1303
+                    "CompressedSize": 1304
                 }
             }, {
                 "Item": {
                     "Name": "Tutorial",
-                    "Size": 4669,
-                    "CompressedSize": 978
+                    "Size": 4576,
+                    "CompressedSize": 975
                 }
             }]
         }, {
@@ -231,14 +231,14 @@
         }, {
             "Item": {
                 "Name": "TinyExport/Nope/html5/release/build/code.js",
-                "Size": 52838,
-                "CompressedSize": 8431
+                "Size": 53081,
+                "CompressedSize": 8505
             },
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/Nope/html5/release/artifacts/scripts/tsc-emit.js",
-                    "Size": 52758,
-                    "CompressedSize": 8355
+                    "Size": 53001,
+                    "CompressedSize": 8429
                 }
             }]
         }, {
