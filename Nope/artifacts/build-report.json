@@ -170,8 +170,8 @@
         "Children": [{
             "Item": {
                 "Name": "TinyExport/Nope/html5/release/build/entities.js",
-                "Size": 57198,
-                "CompressedSize": 7122
+                "Size": 57242,
+                "CompressedSize": 7142
             },
             "Children": [{
                 "Item": {
@@ -188,8 +188,8 @@
             }, {
                 "Item": {
                     "Name": "GameScene",
-                    "Size": 5243,
-                    "CompressedSize": 1162
+                    "Size": 5288,
+                    "CompressedSize": 1180
                 }
             }, {
                 "Item": {
@@ -207,19 +207,19 @@
                 "Item": {
                     "Name": "ScoreParticles",
                     "Size": 4820,
-                    "CompressedSize": 1223
+                    "CompressedSize": 1222
                 }
             }, {
                 "Item": {
                     "Name": "TapParticles",
                     "Size": 5306,
-                    "CompressedSize": 1300
+                    "CompressedSize": 1303
                 }
             }, {
                 "Item": {
                     "Name": "Tutorial",
-                    "Size": 4670,
-                    "CompressedSize": 980
+                    "Size": 4669,
+                    "CompressedSize": 978
                 }
             }]
         }, {
@@ -231,14 +231,14 @@
         }, {
             "Item": {
                 "Name": "TinyExport/Nope/html5/release/build/code.js",
-                "Size": 52760,
-                "CompressedSize": 8410
+                "Size": 52838,
+                "CompressedSize": 8431
             },
             "Children": [{
                 "Item": {
                     "Name": "TinyExport/Nope/html5/release/artifacts/scripts/tsc-emit.js",
-                    "Size": 52680,
-                    "CompressedSize": 8334
+                    "Size": 52758,
+                    "CompressedSize": 8355
                 }
             }]
         }, {

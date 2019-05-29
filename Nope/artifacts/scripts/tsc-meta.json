@@ -278,31 +278,31 @@
         {
             "Key": "tsconfig",
             "Description": "Time taken to read and parse the given tsconfig.json file",
-            "Duration": 196,
+            "Duration": 192,
             "Steps": 1
         },
         {
             "Key": "checksum",
             "Description": "Time taken to compute the MD5 of all inputs",
-            "Duration": 321,
+            "Duration": 322,
             "Steps": 1
         },
         {
             "Key": "compile",
             "Description": "Time taken to compile the TypeScript program",
-            "Duration": 1679,
+            "Duration": 1480,
             "Steps": 27
         },
         {
             "Key": "emit",
             "Description": "Time taken to generate and write the JavaScript output",
-            "Duration": 293,
+            "Duration": 236,
             "Steps": 2
         },
         {
             "Key": "metadata",
             "Description": "Time taken to reflect Tiny metadata from the compiled program",
-            "Duration": 28,
+            "Duration": 41,
             "Steps": 15
         }
     ],
@@ -328,6 +328,6 @@
         "E:/Nope/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityGroup.ts",
         "E:/Nope/Library/PackageCache/com.unity.tiny@0.14.5-preview/Runtime/Modules/UTiny.EntityGroup/Scripts/EntityLookupCache.ts"
     ],
-    "InputHash": "fc8cd1e7a4ae8d8c3df09846b5a2cdfd",
-    "GeneratedAt": "Tue May 28 2019 10:43:25 GMT-0700 (Pacific Daylight Time)"
+    "InputHash": "283bb75fa11bb9817cbc9f55da8a30e6",
+    "GeneratedAt": "Tue May 28 2019 19:36:15 GMT-0700 (Pacific Daylight Time)"
 }

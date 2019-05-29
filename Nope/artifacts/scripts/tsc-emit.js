@@ -659,11 +659,13 @@ var game;
                 var distX = touch.x - position.position.x;
                 var distY = touch.y - position.position.y;
                 var dist = Math.sqrt(distX * distX + distY * distY);
+                console.log(distX);
+                console.log(distY);
                 //Add impulse
                 if (dist != 0 && distX != 0 && distY != 0) {
                     var impulse = new ut.Physics2D.AddImpulse2D();
                     impulse.point = new Vector2(touch.x, touch.y);
-                    impulse.impulse = new Vector2(input.force * (distX / 0.1) * (-0.1 / dist), input.force * (distY / 0.1) * (-0.1 / dist));
+                    impulse.impulse = new Vector2(input.force * distX / 2 * (0.075 / dist) * -1, input.force * distY / 2 * (0.075 / dist) * -1);
                     _this.world.addComponentData(entity, impulse);
                 }
                 //Add particles
