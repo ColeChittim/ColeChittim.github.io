@@ -301,7 +301,7 @@ var game;
                     // stop the animation
                     sequencePlayer.paused = true;
                     // play hit sound
-                    game.AudioService.playAudioSourceByName(_this.world, 'audio/sfx_hit');
+                    game.AudioService.playAudioSourceByName(_this.world, 'audio/sfx_die');
                     // fix: defer the game over call until after iteration
                     gameOver = true;
                     //Shake camera
