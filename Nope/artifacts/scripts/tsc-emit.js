@@ -536,21 +536,27 @@ var game;
                 while (x == game.GemSpawnerSystem.lastSpot)
                     x = Math.floor(Utils.GetRandom(0, 3));
                 var loc = new Vector3();
+                var canvasEntity = this.world.getEntityByName("Canvas"); // get canvas
+                var canvas = this.world.getComponentData(canvasEntity, ut.UILayout.RectTransform);
+                var scaleX = canvas.sizeDelta.x * canvas.sizeDelta.x * 1.5;
+                var scaleY = canvas.sizeDelta.y;
+                console.log("Scale x: " + scaleX);
+                console.log("Scale Y: " + scaleY);
                 switch (x) {
                     case 0:
-                        loc = new Vector3(0.4, 0);
+                        loc = new Vector3(0.4 * scaleX, 0);
                         break;
                     case 1:
-                        loc = new Vector3(-0.4, 0);
+                        loc = new Vector3(-0.4 * scaleX, 0);
                         break;
                     case 2:
-                        loc = new Vector3(0, 0.4);
+                        loc = new Vector3(0, 0.4 * scaleY);
                         break;
                     case 3:
-                        loc = new Vector3(0, -0.4);
+                        loc = new Vector3(0, -0.4 * scaleY);
                         break;
                     default:
-                        loc = new Vector3(0.4, 0);
+                        loc = new Vector3(0.4 * scaleX, 0);
                         break;
                 }
                 game.GemSpawnerSystem.lastSpot = x;
@@ -656,29 +662,39 @@ var game;
             // play flap wing sound
             game.AudioService.playAudioSourceByName(this.world, 'audio/sfx_bounce');
             // apply input to each entity with the `PlayerInput` component
-            this.world.forEach([ut.Entity, game.PlayerInput, ut.Core2D.TransformLocalPosition], function (entity, input, position) {
+            this.world.forEach([ut.Entity, game.PlayerInput, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalScale], function (entity, input, position, scale) {
                 var touch = ut.Core2D.Input.getWorldInputPosition(_this.world);
                 var distX = touch.x - position.position.x;
                 var distY = touch.y - position.position.y;
                 var dist = Math.sqrt(distX * distX + distY * distY);
-                console.log(dist);
-                console.log(0.075 / dist);
                 //Add impulse             
                 if (dist != 0 && distX != 0 && distY != 0) {
                     var impulse = new ut.Physics2D.AddImpulse2D();
                     impulse.point = new Vector2(0, 0);
-                    //Do something to the distx and disty
                     impulse.impulse = new Vector2(input.force * distX * (0.075 / dist) * -1, input.force * distY * (0.075 / dist) * -1);
                     _this.world.addComponentData(entity, impulse);
                 }
-                console.log("Velocity y = " + _this.world.getComponentData(entity, ut.Physics2D.Velocity2D).velocity.y);
                 //Add particles
                 var particles = Utils.Spawn(_this.world, "game.TapParticles", touch);
                 if (_this.world.hasComponent(particles, ut.Core2D.TransformLocalScale)) {
-                    var scale = _this.world.getComponentData(particles, ut.Core2D.TransformLocalScale);
-                    scale.scale = new Vector3(0.01, 0.01, 0.01);
-                    _this.world.setComponentData(particles, scale);
+                    var scale_1 = _this.world.getComponentData(particles, ut.Core2D.TransformLocalScale);
+                    scale_1.scale = new Vector3(0.01, 0.01, 0.01);
+                    _this.world.setComponentData(particles, scale_1);
                 }
+                ut.Tweens.TweenService.addTween(_this.world, entity, // on which entity
+                ut.Core2D.TransformLocalScale.scale.x, // what component + field
+                .65, 1, // from -> to 
+                0.3, // duration 
+                0, // start time offset
+                ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.Smoothstep, true // remove tween when done (ignored when looping)
+                );
+                ut.Tweens.TweenService.addTween(_this.world, entity, // on which entity
+                ut.Core2D.TransformLocalScale.scale.y, // what component + field
+                .65, 1, // from -> to 
+                0.2, // duration 
+                0, // start time offset
+                ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.Smoothstep, true // remove tween when done (ignored when looping)
+                );
             });
             //Shake camera
             var cameraEntity = this.world.getEntityByName("Camera");
