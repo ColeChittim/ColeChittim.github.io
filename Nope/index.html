@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141184121-1"></script>
     <script>
@@ -13,7 +12,7 @@
 
     gtag('config', 'UA-141184121-1');
     </script>
-
+    
     <script type="text/javascript">
 /**
  * TINY GENERATED CODE, DO NOT EDIT BY HAND
@@ -2495,21 +2494,21 @@ var UT_ASSETS_SETUP = function(world) {
     world.setEntityName(e28, "assets/sprites/Watermark");
     var arch3 = world.createArchetype(ut.Interpolation.BezierCurveFloat)
     var e29 = world.createEntity(arch3);
-    world.setEntityName(e29, "assets/curves/3f600c5b2b3c4558a61dc263cc64ef05");
+    world.setEntityName(e29, "assets/curves/fd40969758584f8a8a01bedae4930de2");
     var arch4 = world.createArchetype(ut.Interpolation.StepCurveColor)
     var e30 = world.createEntity(arch4);
-    world.setEntityName(e30, "assets/gradients/44a8de2e9fce459bb009366bae0bce0a");
+    world.setEntityName(e30, "assets/gradients/4646aebe92764363982319327466303a");
     var arch5 = world.createArchetype(ut.Interpolation.BezierCurveVector3)
     var e31 = world.createEntity(arch5);
-    world.setEntityName(e31, "assets/curves/df87a0a6c20d4083894f330dda9816bd");
+    world.setEntityName(e31, "assets/curves/e07e50c26d9940358a0a7bd9097193d2");
     var e32 = world.createEntity(arch5);
-    world.setEntityName(e32, "assets/curves/eb2829a2fd654ca58ab4c1bd3f98615f");
+    world.setEntityName(e32, "assets/curves/05d884fa55cf4ec9ad8dd8b2a822aac0");
     var e33 = world.createEntity(arch3);
-    world.setEntityName(e33, "assets/curves/1cad6ac7a43b4d06a1cbfb7452bed1e8");
+    world.setEntityName(e33, "assets/curves/b68637e3fb034df39d11acc3a3536d3a");
     var e34 = world.createEntity(arch4);
-    world.setEntityName(e34, "assets/gradients/6713a7db09294ac7bb1b34e8bb71384e");
+    world.setEntityName(e34, "assets/gradients/0202c9ae1a3243bc91ae08afb6edbe39");
     var e35 = world.createEntity(arch3);
-    world.setEntityName(e35, "assets/curves/eed3a98d6850469c8f087afd1ee34709");
+    world.setEntityName(e35, "assets/curves/5c59d53d038249ba9f44de2e4af14e68");
     var c0 = new ut.Audio.AudioClipLoadFromFile();
     c0.fileName = "ut-asset:sfx_bounce";
     world.setComponentData(e0, c0);
@@ -3655,7 +3654,7 @@ entities.game.GameOver.load = function(world) {
     world.setComponentData(e2, c14);
     var c15 = new ut.Core2D.TransformLocalPosition();
     var s8 = new ut.Math.Vector3();
-    s8.x = 0.5;
+    s8.x = 0.6;
     s8.y = 0.11;
     s8.z = 0;
     c15.position = s8;
@@ -3818,7 +3817,7 @@ entities.game.GameOver.load = function(world) {
     world.setComponentData(e6, c38);
     var c39 = new ut.Core2D.TransformLocalPosition();
     var s23 = new ut.Math.Vector3();
-    s23.x = 0.5;
+    s23.x = 0.6;
     s23.y = -0.11;
     s23.z = 0;
     c39.position = s23;
@@ -4389,10 +4388,10 @@ entities.game.ScoreParticles.load = function(world) {
     c5.angle = s4;
     world.setComponentData(e0, c5);
     var c6 = new ut.Particles.LifetimeScale();
-    c6.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/3f600c5b2b3c4558a61dc263cc64ef05');
+    c6.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/fd40969758584f8a8a01bedae4930de2');
     world.setComponentData(e0, c6);
     var c7 = new ut.Particles.LifetimeColor();
-    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/44a8de2e9fce459bb009366bae0bce0a');
+    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/4646aebe92764363982319327466303a');
     world.setComponentData(e0, c7);
     var c8 = new ut.Particles.BurstEmission();
     var s5 = new ut.Math.Range();
@@ -4415,7 +4414,7 @@ entities.game.ScoreParticles.load = function(world) {
     c10.Delay = 1;
     world.setComponentData(e0, c10);
     var c11 = new ut.Particles.LifetimeVelocity();
-    c11.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/df87a0a6c20d4083894f330dda9816bd');
+    c11.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/e07e50c26d9940358a0a7bd9097193d2');
     world.setComponentData(e0, c11);
     var c12 = new ut.Particles.EmitterCircleSource();
     var s8 = new ut.Math.Range();
@@ -4509,7 +4508,7 @@ entities.game.TapParticles.load = function(world) {
     c4.attachToEmitter = true;
     world.setComponentData(e0, c4);
     var c5 = new ut.Particles.LifetimeVelocity();
-    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/eb2829a2fd654ca58ab4c1bd3f98615f');
+    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/05d884fa55cf4ec9ad8dd8b2a822aac0');
     world.setComponentData(e0, c5);
     var c6 = new ut.Particles.EmitterInitialRotation();
     var s4 = new ut.Math.Range();
@@ -4518,10 +4517,10 @@ entities.game.TapParticles.load = function(world) {
     c6.angle = s4;
     world.setComponentData(e0, c6);
     var c7 = new ut.Particles.LifetimeScale();
-    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/1cad6ac7a43b4d06a1cbfb7452bed1e8');
+    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/b68637e3fb034df39d11acc3a3536d3a');
     world.setComponentData(e0, c7);
     var c8 = new ut.Particles.LifetimeColor();
-    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/6713a7db09294ac7bb1b34e8bb71384e');
+    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/0202c9ae1a3243bc91ae08afb6edbe39');
     world.setComponentData(e0, c8);
     var c9 = new ut.Particles.BurstEmission();
     var s5 = new ut.Math.Range();
@@ -4551,7 +4550,7 @@ entities.game.TapParticles.load = function(world) {
     c11.angularVelocity = s9;
     world.setComponentData(e0, c11);
     var c12 = new ut.Particles.LifetimeAngularVelocity();
-    c12.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/eed3a98d6850469c8f087afd1ee34709');
+    c12.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/5c59d53d038249ba9f44de2e4af14e68');
     world.setComponentData(e0, c12);
     var c13 = new ut.Particles.EmitterInitialScale();
     var s10 = new ut.Math.Range();
@@ -4746,8 +4745,8 @@ entities.game.Tutorial.load = function(world) {
     world.setComponentData(e3, c19);
     var c20 = new ut.Core2D.TransformLocalScale();
     var s13 = new ut.Math.Vector3();
-    s13.x = 0.6;
-    s13.y = 0.6;
+    s13.x = 0.4;
+    s13.y = 0.4;
     s13.z = 1;
     c20.scale = s13;
     world.setComponentData(e3, c20);
