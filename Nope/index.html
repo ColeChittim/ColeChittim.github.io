@@ -3,16 +3,6 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141184121-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-141184121-1');
-    </script>
-    
     <script type="text/javascript">
 /**
  * TINY GENERATED CODE, DO NOT EDIT BY HAND
@@ -2494,21 +2484,21 @@ var UT_ASSETS_SETUP = function(world) {
     world.setEntityName(e28, "assets/sprites/Watermark");
     var arch3 = world.createArchetype(ut.Interpolation.BezierCurveFloat)
     var e29 = world.createEntity(arch3);
-    world.setEntityName(e29, "assets/curves/fd40969758584f8a8a01bedae4930de2");
+    world.setEntityName(e29, "assets/curves/c4fb5e6356ef4b9982f2b1a8f78948a5");
     var arch4 = world.createArchetype(ut.Interpolation.StepCurveColor)
     var e30 = world.createEntity(arch4);
-    world.setEntityName(e30, "assets/gradients/4646aebe92764363982319327466303a");
+    world.setEntityName(e30, "assets/gradients/11ea817192be4062bfe71b882fd0d298");
     var arch5 = world.createArchetype(ut.Interpolation.BezierCurveVector3)
     var e31 = world.createEntity(arch5);
-    world.setEntityName(e31, "assets/curves/e07e50c26d9940358a0a7bd9097193d2");
+    world.setEntityName(e31, "assets/curves/c3b6c8c19a55438cac106c6c593a9d3b");
     var e32 = world.createEntity(arch5);
-    world.setEntityName(e32, "assets/curves/05d884fa55cf4ec9ad8dd8b2a822aac0");
+    world.setEntityName(e32, "assets/curves/ebcfa2d414fa4d1e9d399efde34e3965");
     var e33 = world.createEntity(arch3);
-    world.setEntityName(e33, "assets/curves/b68637e3fb034df39d11acc3a3536d3a");
+    world.setEntityName(e33, "assets/curves/d5b00107ad764c7ca1eaf3ba2516cc1b");
     var e34 = world.createEntity(arch4);
-    world.setEntityName(e34, "assets/gradients/0202c9ae1a3243bc91ae08afb6edbe39");
+    world.setEntityName(e34, "assets/gradients/4ec1fd8e80e34b9987f0765d0c08ee1c");
     var e35 = world.createEntity(arch3);
-    world.setEntityName(e35, "assets/curves/5c59d53d038249ba9f44de2e4af14e68");
+    world.setEntityName(e35, "assets/curves/11fa80b0dc9a4941a479c5b77faf0c60");
     var c0 = new ut.Audio.AudioClipLoadFromFile();
     c0.fileName = "ut-asset:sfx_bounce";
     world.setComponentData(e0, c0);
@@ -3980,7 +3970,7 @@ entities.game.GameOver.load = function(world) {
 
 entities.game.GameScene.name = "GameScene";
 entities.game.GameScene.load = function(world) {
-    var arch0 = world.createArchetype(game.PlayerInput, this.Component, ut.Core2D.LayerSorting, ut.Core2D.Sprite2DRenderer, ut.Core2D.Sprite2DRendererOptions, ut.Core2D.Sprite2DSequence, ut.Core2D.Sprite2DSequencePlayer, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation, ut.Core2D.TransformLocalScale, ut.Core2D.TransformNode, ut.HitBox2D.RectHitBox2D, ut.layers.Default, ut.Physics2D.RigidBody2D, ut.Physics2D.Velocity2D)
+    var arch0 = world.createArchetype(game.PlayerInput, this.Component, ut.Core2D.LayerSorting, ut.Core2D.Sprite2DRenderer, ut.Core2D.Sprite2DRendererOptions, ut.Core2D.Sprite2DSequence, ut.Core2D.Sprite2DSequencePlayer, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalRotation, ut.Core2D.TransformLocalScale, ut.Core2D.TransformNode, ut.HitBox2D.RectHitBox2D, ut.layers.Default, ut.Physics2D.RigidBody2D)
     var e0 = world.createEntity(arch0);
     world.setEntityName(e0, "Player");
     var arch1 = world.createArchetype(this.Component, ut.Core2D.TransformNode, ut.layers.Default)
@@ -4388,10 +4378,10 @@ entities.game.ScoreParticles.load = function(world) {
     c5.angle = s4;
     world.setComponentData(e0, c5);
     var c6 = new ut.Particles.LifetimeScale();
-    c6.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/fd40969758584f8a8a01bedae4930de2');
+    c6.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/c4fb5e6356ef4b9982f2b1a8f78948a5');
     world.setComponentData(e0, c6);
     var c7 = new ut.Particles.LifetimeColor();
-    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/4646aebe92764363982319327466303a');
+    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/11ea817192be4062bfe71b882fd0d298');
     world.setComponentData(e0, c7);
     var c8 = new ut.Particles.BurstEmission();
     var s5 = new ut.Math.Range();
@@ -4414,7 +4404,7 @@ entities.game.ScoreParticles.load = function(world) {
     c10.Delay = 1;
     world.setComponentData(e0, c10);
     var c11 = new ut.Particles.LifetimeVelocity();
-    c11.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/e07e50c26d9940358a0a7bd9097193d2');
+    c11.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/c3b6c8c19a55438cac106c6c593a9d3b');
     world.setComponentData(e0, c11);
     var c12 = new ut.Particles.EmitterCircleSource();
     var s8 = new ut.Math.Range();
@@ -4508,7 +4498,7 @@ entities.game.TapParticles.load = function(world) {
     c4.attachToEmitter = true;
     world.setComponentData(e0, c4);
     var c5 = new ut.Particles.LifetimeVelocity();
-    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/05d884fa55cf4ec9ad8dd8b2a822aac0');
+    c5.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/ebcfa2d414fa4d1e9d399efde34e3965');
     world.setComponentData(e0, c5);
     var c6 = new ut.Particles.EmitterInitialRotation();
     var s4 = new ut.Math.Range();
@@ -4517,10 +4507,10 @@ entities.game.TapParticles.load = function(world) {
     c6.angle = s4;
     world.setComponentData(e0, c6);
     var c7 = new ut.Particles.LifetimeScale();
-    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/b68637e3fb034df39d11acc3a3536d3a');
+    c7.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/d5b00107ad764c7ca1eaf3ba2516cc1b');
     world.setComponentData(e0, c7);
     var c8 = new ut.Particles.LifetimeColor();
-    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/0202c9ae1a3243bc91ae08afb6edbe39');
+    c8.curve = ut.EntityLookupCache.getByName(world, 'assets/gradients/4ec1fd8e80e34b9987f0765d0c08ee1c');
     world.setComponentData(e0, c8);
     var c9 = new ut.Particles.BurstEmission();
     var s5 = new ut.Math.Range();
@@ -4550,7 +4540,7 @@ entities.game.TapParticles.load = function(world) {
     c11.angularVelocity = s9;
     world.setComponentData(e0, c11);
     var c12 = new ut.Particles.LifetimeAngularVelocity();
-    c12.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/5c59d53d038249ba9f44de2e4af14e68');
+    c12.curve = ut.EntityLookupCache.getByName(world, 'assets/curves/11fa80b0dc9a4941a479c5b77faf0c60');
     world.setComponentData(e0, c12);
     var c13 = new ut.Particles.EmitterInitialScale();
     var s10 = new ut.Math.Range();
@@ -5024,7 +5014,7 @@ var game;
                 case game.GameState.Tutorial:
                     {
                         // if the user clicks at any point during the tutorial, we end the tutorial and transition to gameplay
-                        if (ut.Runtime.Input.getMouseButtonDown(0)) {
+                        if (ut.Runtime.Input.getMouseButtonDown(0) && this.world.getEntityByName("Player")) {
                             game.GameService.endTutorial(this.world);
                         }
                     }
@@ -5158,6 +5148,9 @@ var game;
          */
         GameService.initialize = function (world) {
             this.startTutorial(world);
+            var gameConfig = world.getConfigData(game.GameConfig);
+            gameConfig.highScore = getHS();
+            world.setConfigData(gameConfig);
         };
         ;
         /**
@@ -5219,6 +5212,7 @@ var game;
             // destroy the tutorial scene
             ut.EntityGroup.destroyAll(world, this.kTutorialSceneName);
             var player = world.getEntityByName(this.kPlayerEntityName);
+            world.addComponentData(player, new ut.Physics2D.Velocity2D());
             var gameConfig = world.getConfigData(game.GameConfig);
             // stop all tweens from tutorial
             ut.Tweens.TweenService.removeAllEndedTweens(world);
@@ -5240,6 +5234,7 @@ var game;
             // update the highscore
             if (gameConfig.currentScore > gameConfig.highScore) {
                 gameConfig.highScore = gameConfig.currentScore;
+                saveHS(gameConfig.highScore);
             }
             gameConfig.state = game.GameState.GameOver;
             world.setConfigData(gameConfig);
@@ -5297,8 +5292,6 @@ var game;
                 var canvas = this.world.getComponentData(canvasEntity, ut.UILayout.RectTransform);
                 var scaleX = canvas.sizeDelta.x * canvas.sizeDelta.x * 1.5;
                 var scaleY = canvas.sizeDelta.y;
-                console.log("Scale x: " + scaleX);
-                console.log("Scale Y: " + scaleY);
                 switch (x) {
                     case 0:
                         loc = new Vector3(0.4 * scaleX, 0);
@@ -5416,8 +5409,6 @@ var game;
             if (!ut.Runtime.Input.getMouseButtonDown(0)) {
                 return;
             }
-            // play flap wing sound
-            game.AudioService.playAudioSourceByName(this.world, 'audio/sfx_bounce');
             // apply input to each entity with the `PlayerInput` component
             this.world.forEach([ut.Entity, game.PlayerInput, ut.Core2D.TransformLocalPosition, ut.Core2D.TransformLocalScale], function (entity, input, position, scale) {
                 var touch = ut.Core2D.Input.getWorldInputPosition(_this.world);
@@ -5452,24 +5443,26 @@ var game;
                 0, // start time offset
                 ut.Core2D.LoopMode.Once, ut.Tweens.TweenFunc.Smoothstep, true // remove tween when done (ignored when looping)
                 );
+                // play flap wing sound
+                game.AudioService.playAudioSourceByName(_this.world, 'audio/sfx_bounce');
+                //Shake camera
+                var cameraEntity = _this.world.getEntityByName("Camera");
+                if (_this.world.exists(cameraEntity)) {
+                    if (_this.world.hasComponent(cameraEntity, game.ShakeAnimationPlayer)) {
+                        var shakePlayer = _this.world.getComponentData(cameraEntity, game.ShakeAnimationPlayer);
+                        shakePlayer.Timer = 0;
+                        _this.world.setComponentData(cameraEntity, shakePlayer);
+                    }
+                    else {
+                        var cameraShakePlayer = new game.ShakeAnimationPlayer();
+                        cameraShakePlayer.Duration = 0.1;
+                        cameraShakePlayer.StartDelay = 0;
+                        cameraShakePlayer.ShakeRadiusX = 0.05;
+                        cameraShakePlayer.ShakeRadiusY = 0.05;
+                        _this.world.addComponentData(cameraEntity, cameraShakePlayer);
+                    }
+                }
             });
-            //Shake camera
-            var cameraEntity = this.world.getEntityByName("Camera");
-            if (this.world.exists(cameraEntity)) {
-                if (this.world.hasComponent(cameraEntity, game.ShakeAnimationPlayer)) {
-                    var shakePlayer = this.world.getComponentData(cameraEntity, game.ShakeAnimationPlayer);
-                    shakePlayer.Timer = 0;
-                    this.world.setComponentData(cameraEntity, shakePlayer);
-                }
-                else {
-                    var cameraShakePlayer = new game.ShakeAnimationPlayer();
-                    cameraShakePlayer.Duration = 0.1;
-                    cameraShakePlayer.StartDelay = 0;
-                    cameraShakePlayer.ShakeRadiusX = 0.05;
-                    cameraShakePlayer.ShakeRadiusY = 0.05;
-                    this.world.addComponentData(cameraEntity, cameraShakePlayer);
-                }
-            }
         };
         PlayerInputSystem = __decorate([
             ut.executeAfter(ut.Shared.UserCodeStart),
@@ -5576,18 +5569,34 @@ var game;
         * Updates the `TransformLocalPosition` based on the `Velocity` component each frame.
         */
         VelocitySystem.prototype.OnUpdate = function () {
-            this.world.forEach([ut.Core2D.TransformLocalPosition, game.Velocity], function (transform, velocity) {
-                var p = transform.position;
+            var _this = this;
+            this.world.forEach([ut.Entity, ut.Core2D.TransformLocalPosition, ut.Physics2D.Velocity2D], function (entity, transform, velocity) {
+                var newv = new ut.Physics2D.SetVelocity2D();
                 var v = velocity.velocity;
-                p.x += v.x;
-                p.y += v.y;
-                transform.position = p;
+                var xRatio = Math.abs(v.x) / Math.abs(v.y);
+                if (v.y == 0 || xRatio > 1)
+                    xRatio = 1;
+                var yRatio = Math.abs(v.y) / Math.abs(v.x);
+                if (v.x == 0 || yRatio > 1)
+                    yRatio = 1;
+                if (v.x > 0) {
+                    newv.velocity.x = v.x - 0.0055 * xRatio;
+                }
+                else if (v.x < 0) {
+                    newv.velocity.x = v.x + 0.0055 * xRatio;
+                }
+                if (v.y > 0) {
+                    newv.velocity.y = v.y - 0.0055 * yRatio;
+                }
+                else if (v.y < 0) {
+                    newv.velocity.y = v.y + 0.0055 * yRatio;
+                }
+                _this.world.addComponentData(entity, newv);
             });
         };
         VelocitySystem = __decorate([
             ut.executeAfter(ut.Shared.UserCodeStart),
-            ut.executeBefore(ut.Shared.UserCodeEnd),
-            ut.requiredComponents(game.PlayerInput, game.Velocity)
+            ut.executeBefore(ut.Shared.UserCodeEnd)
         ], VelocitySystem);
         return VelocitySystem;
     }(ut.ComponentSystem));
@@ -5670,6 +5679,17 @@ var ut;
     }());
     ut.EntityLookupCache = EntityLookupCache;
 })(ut || (ut = {}));
+function saveHS(score) {
+    if (typeof (Storage) !== "undefined") {
+        localStorage.setItem('score', score);
+    }
+}
+function getHS() {
+    if (typeof (Storage) !== "undefined") {
+        return parseInt(localStorage.getItem('score'));
+    }
+    return 0;
+}
 //# sourceMappingURL=tsc-emit.js.map
 
 /**
