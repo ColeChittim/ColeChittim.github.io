@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Cole.</title>
+        <meta charset="utf-8">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141184121-1"></script>
         <script>
@@ -11,6 +12,9 @@
 
         gtag('config', 'UA-141184121-1');
         </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        
 
         <link rel="stylesheet" href="css/styles.css">
         <link rel="stylesheet" href="css/animate.css">
@@ -32,7 +36,7 @@
         <section> 
             <div class="sectionContainer animated fadeInUp">
                 <article id="about">
-                        <img src="assets/me.png" alt="me">
+                        <img src="assets/me.png" alt="me" class="banner">
                         <p><font size="+4">Hi</font><br><br>
                         My name is Cole.<br>
                         I make things. Like this website.<br>
@@ -40,24 +44,25 @@
                         as well as with application programming languages such as C# and Java.<br>
                         I'm always looking to expand my portfolio will tackle any problem placed in front of me. <br>
                         <br>
-                        For more, <a href="assets/resume.pdf" target="_blank">click here</a></p>
+                        For more about me, <a href="assets/resume.pdf" target="_blank">click here</a></p>
                 </article>
             </div>
             <div class="animated fadeInUp">
                 <article id="games">
                     <div class="work">
                             <p><font size="+2">Personal Projects</font></p>
-
+                            
                             <a href="werepigs.html">
-                                <img src="assets/werepigs.png" alt="werepigs banner" class="anim">
+                                <img src="assets/werepigs.png" alt="werepigs banner" class="anim banner">
                             </a>
+                           
                             <a href="nope.html" >
-                                <img src="assets/Nope.png" alt="nope banner" class="anim">
+                                <img src="assets/Nope.png" alt="nope banner" class="anim banner">
                             </a>
-                        <!--    <a href="fare.html" >
-                                <img src="assets/fare.png" alt="werepigs banner" class="anim">
+                            <a href="tinydino.html" >
+                                <img src="assets/tinydino.png" alt="Tiny Dino banner" class="anim banner">
                             </a>
-                            <a href="squibblesquabble.html">
+                            <!--<a href="squibblesquabble.html">
                                 <img src="assets/squibblesquabble.png" alt="werepigs banner" class="anim"> 
                             </a>-->
                     </div>
@@ -69,10 +74,10 @@
                             <p><font size="+2">Game Jam Projects</font></p>
 
                             <a href="321.html">
-                                <img src="assets/321.png" alt="3 2 1 banner" class="anim">
+                                <img src="assets/321.png" alt="3 2 1 banner" class="anim banner">
                             </a>
                             <a href="skyrhymes.html">
-                                <img src="assets/skyrhymes.PNG" alt="skyrhymes banner" class="anim">
+                                <img src="assets/skyrhymes.PNG" alt="skyrhymes banner" class="anim banner">
                             </a>
                     </div>
                 </article>
@@ -82,16 +87,27 @@
                     <div class="work">
                             <p><font size="+2">Student Projects<br>(Western Washington University 2017-2020)</font></p>
 
-                            <a href="deadwood.html"><img src="assets/deadwood.png" alt="deadwood banner" class="anim"></a>
-                            <a href="messaging.html"><img src="assets/messaging.PNG" alt="messaging banner" class="anim"></a>
-                            <a href="yourkitchen.html"><img src="assets/yourkitchen.jpg" alt="Your Kitchen banner" class="anim"></a>
+                            <a href="deadwood.html"><img src="assets/deadwood.png" alt="deadwood banner" class="anim banner"></a>
+                            <a href="messaging.html"><img src="assets/messaging.PNG" alt="messaging banner" class="anim banner"></a>
+                            <a href="yourkitchen.html"><img src="assets/yourkitchen.jpg" alt="Your Kitchen banner" class="anim banner"></a>
                     </div>
                 </article>
             </div>
         </section>
 
         <footer class="animated fadeInUp">
-            <P>Copyright &copy 2019</P>
+            <P>Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved</P>
         </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+        <script>
+            var image = document.getElementsByClassName('banner');
+            new simpleParallax(image, {
+                scale: 1.5,
+                delay: .65,
+                overflow: true,
+                transition: 'cubic-bezier(0,0,0,1)'
+            });
+        </script>
     </body>
 </html>

@@ -68,6 +68,19 @@ a:active {
   display: inline-block;
 }
 
+.parallax::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(2);
+  background-size: 100%;
+  z-index: -1;
+  background-image: url(some link to some image);
+}
+
 header {
   background: #ffffff;
 }
@@ -135,7 +148,8 @@ nav a:hover::before {
   width: 80%;
   padding: 100px;
   text-align: center;
-	margin: 0 auto;
+  margin: 0 auto;
+  
 }
 
 .work img{
