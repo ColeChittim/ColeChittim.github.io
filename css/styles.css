@@ -162,3 +162,21 @@ footer {
   text-align: center;
   padding: 50px;
 }
+
+.social{
+  width:32px; 
+  height: auto;
+  padding: 10px;
+
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+}
+
+.social:hover {
+opacity: 0.5;
+}
