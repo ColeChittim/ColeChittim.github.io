@@ -68,6 +68,10 @@ a:active {
   display: inline-block;
 }
 
+.gamePageCenter {
+  text-align: center;
+}
+
 .parallax::after {
   content: " ";
   position: absolute;
