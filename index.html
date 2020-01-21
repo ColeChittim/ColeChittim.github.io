@@ -36,7 +36,7 @@
         <section> 
             <div class="sectionContainer animated fadeInUp">
                 <article id="about">
-                        <img src="assets/me.png" alt="me" class="banner">
+                        <img src="assets/me.png" alt="me" class="banner parralax">
                         <p><font size="+4">Hi</font><br><br>
                         My name is Cole.<br>
                         I make things. Like this website.<br>
@@ -50,19 +50,17 @@
                 <article id="games">
                     <div class="work">
                             <p><font size="+2">Games</font></p>
-                            
-                            <a href="werepigs.html">
-                                <img src="assets/werepigs.png" alt="werepigs banner" class="anim banner">
-                            </a>
-                           
-                            <a href="nope.html" >
-                                <img src="assets/Nope.png" alt="nope banner" class="anim banner">
-                            </a>
                             <a href="tinydino.html" >
                                 <img src="assets/tinydino.png" alt="Tiny Dino banner" class="anim banner">
                             </a>
                             <a href="pieces.html" >
                                 <img src="assets/pieces.png" alt="PUPTP banner" class="anim banner">
+                            </a>
+                            <a href="nope.html" >
+                                <img src="assets/Nope.png" alt="nope banner" class="anim banner">
+                            </a>
+                            <a href="werepigs.html">
+                                <img src="assets/werepigs.png" alt="werepigs banner" class="anim banner">
                             </a>
                     </div>
                 </article>
@@ -79,7 +77,7 @@
         
         <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
         <script>
-            var image = document.getElementsByClassName('banner');
+            var image = document.getElementsByClassName('parralax');
             new simpleParallax(image, {
                 scale: 1.5,
                 delay: .65,
