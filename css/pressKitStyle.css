@@ -6,18 +6,22 @@ html {
 
 body {
 	margin: 0;
-	background: #ffffff;
+	background: #8092E4;
   font-family: 'Lato', sans-serif;
 }
 
+a{
+  color: #ffffff;
+}
+
 a:link{
-  color: rgb(0, 0, 0);
+  color: #ffffff;
 }
 a:visited {
-  color: rgb(0, 0, 0);
+  color: #ffffff;
 }
 a:active {
-  color: rgb(0, 0, 0);
+  color: #ffffff;
 }
 
 nav {
@@ -48,14 +52,14 @@ nav a {
 }
 
 nav a:hover {
-  color: #000;
+  color: #ffffff;;
 }
 
 nav a::before {
   content: '';
   display: block;
   height: 0.25em;
-  background-color: #000;
+  background-color: #ffffff;
 
   position: absolute;
   top: 0.5em;
@@ -76,7 +80,7 @@ h1{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 95%;
 }
 
 #factsheet{
@@ -85,6 +89,7 @@ h1{
   width: 10%;
   padding: 5%;
   font-size: 1em;
+  color: #ffffff;
 }
 
 .main-content{
@@ -93,6 +98,7 @@ h1{
   width: 50%;
   margin-right: 10%;
   font-size: 1.4em;
+  color: #ffffff;
 }
 
 #credits{
