@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: #2c0249;
+  font-family: 'Lato', sans-serif;
+}
+
+a{
+  color: #ffffff;
+}
+
+a:link{
+  color: #ffffff;
+}
+a:visited {
+  color: #ffffff;
+}
+a:active {
+  color: #ffffff;
+}
+
+nav {
+  float: left;
+  padding-top: 5%;
+}
+
+nav ul {
+  float: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 1em;
+  padding-top: 1em;
+
+  position: relative;
+}
+
+nav a {
+  color: rgb(223, 153, 141);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 800;
+}
+
+nav a:hover {
+  color: #ffffff;;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 0.25em;
+  background-color: #ffffff;
+
+  position: absolute;
+  top: 0.5em;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+h1{
+  font-weight: 10em;
+}
+
+#logo-top{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+}
+
+#factsheet{
+  float: left;
+  position: relative;
+  width: 10%;
+  padding: 5%;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.main-content{
+  float: right;
+  position: relative;
+  width: 50%;
+  margin-right: 10%;
+  font-size: 1.4em;
+  color: #ffffff;
+}
+
+#credits{
+  float: left;
+  font-size: 1em;
+}
+
+#contact{
+  float: right;
+  margin-right: 50%;
+  font-size: 1em;
+}
+
+/* Images */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+
+  
+  /* width: (containers) */
+  max-width: 1500px;
+
+	/* min-width: (containers); */
+	min-width: 800px;
+}
+
+.row{
+  width: 100%;
+  display: inline-block;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.imageBlock {
+  float: left;
+  width: 35%;
+  text-align: center;
+  padding: 1em;
+}
+
+.image {
+  border: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.image img {
+  display: block;
+}
+
+.image.fit {
+  display: block;
+  width: 100%;
+}
+
+.image.fit img {
+  display: block;
+  width: 100%;
+}

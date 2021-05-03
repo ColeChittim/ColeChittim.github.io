@@ -135,7 +135,7 @@ h6 {
 }
 
 #description{
-  background-color: #7082d5;
+  background-color: #2c0249;
   color: #fff; 
   box-shadow: 0 0px 50px 0 rgba(0, 0, 0, 0.2), 0 0px 50px 0 rgba(0, 0, 0, 0.19);
 }
@@ -148,7 +148,7 @@ h6 {
   width: 4.5em;
   height: 4.5em;
   border-radius: 50%;
-  background-color: #8092E4;
+  background-color: #ac2a58;
   color: #fff;
   font-family: 'bungeeregular';
   font-size: 2.2em;
@@ -160,7 +160,7 @@ h6 {
 
 /* Banner */
 #banner {
-  background-color: #8092E4;
+  background-color: #2c0249;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
