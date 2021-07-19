@@ -1,0 +1,31 @@
+Jelly Brawl V 1.4.2  
+
+- Fixed issue with local player select showing online player select
+- Fixed graphical issues in opening cinematic
+- Updated challenges UI
+
+-------------------------------------------
+
+Jelly Brawl V 1.4.1
+I'm back to roll out multiple new updates that aim to overhaul Jelly Brawl's visuals and content!
+
+I've Overhauled the Networking!
+Many have commented on the networking being subpar and I've been aware of this. Over the past couple months I actually have had the chance to work on a lot of networking based projects and have been able to take what I've learned and apply it to Jelly Brawl's networking. With this update you should see reduced lag online and proper authoritative servers with rollback like a true fighting game. 
+
+I've Also Continued the Total UI Overhaul
+With a more clean design to the online lobby showing only your player select and other players to the right of you
+
+Bug Fixes
+Plenty of fixes as well as performance improvements have been implemented such as controller inversion working online and the resolution select not containing duplicates!
+
+As I said, more is yet to come including:
+- More UI redesigns
+- More unlocks
+- And possibly a new platform to play Jelly Brawl on!
+
+I'll have more to share with you on these soon. 
+Stay tuned! I've been busy but Jelly Brawl is back baby!
+
+- Cole
+
+-------------------------------------------
