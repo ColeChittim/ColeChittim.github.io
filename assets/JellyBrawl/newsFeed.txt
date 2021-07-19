@@ -1,3 +1,11 @@
+Jelly Brawl V 1.4.3  
+
+- Added daily exp reward!
+- Added Jelly Brawl news section
+- 
+
+-------------------------------------------
+
 Jelly Brawl V 1.4.2  
 
 - Fixed issue with local player select showing online player select
