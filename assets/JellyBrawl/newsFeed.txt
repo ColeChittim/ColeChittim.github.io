@@ -1,8 +1,16 @@
 Jelly Brawl V 1.4.3  
 
 - Added daily exp reward!
+- Destructible props added to stages!
+- 3 New Achievements!
+- Tutorial and classic pop ups updated!
+- 2 New Challenge Round types (Retro and Gooey)!
+- Challenge Rounds more common
+- 5 New Levels (Max level cap level 40)
+- New particles and sounds
+- New Jelly Brawl profile section showing current level progress and upcoming unlocks
 - Added Jelly Brawl news section
-- 
+- Bug fixes and more!
 
 -------------------------------------------
 
