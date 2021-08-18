@@ -2,10 +2,10 @@ Jelly Brawl V 1.4.4
 
 - Fixed Hit & Run slime
 - Fixed Hit & Run cars spawning incorrectly
-- Added desctructible enviroments to Hit & Run
+- Added destructible environments to Hit & Run
 - Adjusted camera movement in classic
-- Fixed Destructibles in online
-- Small Bug fixes
+- Fixed Destructible in online
+- Other Small Bug fixes
 
 -------------------------------------------
 
