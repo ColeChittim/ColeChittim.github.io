@@ -1,3 +1,13 @@
+Jelly Brawl V 1.5 
+
+- Networking updated to Photon Fusion
+- Graphical improvements to shaders and lighting
+- Removed Dependencies and Improved Stability
+- Smaller Size on Disk
+- Many Small Bug Fixes 
+
+-------------------------------------------
+
 Jelly Brawl V 1.4.4 
 
 - Fixed Hit & Run slime
