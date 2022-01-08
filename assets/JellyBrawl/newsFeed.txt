@@ -1,3 +1,14 @@
+Jelly Brawl V 1.5.1
+
+- Race Maps Slightly Altered to Make Easier
+- Water no longer takes coins or kills you in Hit & Run
+- More Cops Spawn Following Rounds 5 and 10 in Hit & Run
+- Fixed Joining by code or hosting room after attempting one before
+- Fixed Sound Effects playing multiple times for non-host players online
+- More bug fixes
+
+-------------------------------------------
+
 Jelly Brawl V 1.5 
 
 - Networking updated to Photon Fusion
