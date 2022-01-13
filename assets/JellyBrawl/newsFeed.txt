@@ -6,6 +6,7 @@ Jelly Brawl V 1.5.2
 - MANY Hit and Run Bug fixes and balancing changes
 - Increased shadow strength to improve depth
 - Removed region select
+- Levels altered for 10% faster leveling
 - Many More bug fixes... (full list in discord)
 
 -------------------------------------------
