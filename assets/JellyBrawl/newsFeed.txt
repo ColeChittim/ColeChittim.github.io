@@ -1,3 +1,15 @@
+Jelly Brawl V 1.5.2
+
+- "Gooey" challenge round changed to "Edgy"
+- Guard rails added to confusing holes
+- Added coin and street leaderboards to Steam
+- MANY Hit and Run Bug fixes and balancing changes
+- Increased shadow strength to improve depth
+- Removed region select
+- Many More bug fixes... (full list in discord)
+
+-------------------------------------------
+
 Jelly Brawl V 1.5.1
 
 - Race Maps Slightly Altered to Make Easier
