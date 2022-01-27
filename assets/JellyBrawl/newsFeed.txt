@@ -5,6 +5,7 @@ Jelly Brawl V 1.5.3
 - Bonk Hammer making no sound on Clients Fixed
 - Fixed players quitting early breaking matches
 - Fixed first click going previous direction in Online
+- Fixed UI Null pointers in menu
 - Minor Fixes for null pointers in Camera follow and player collision
 
 -------------------------------------------
