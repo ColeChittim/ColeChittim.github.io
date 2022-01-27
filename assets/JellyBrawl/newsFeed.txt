@@ -1,3 +1,14 @@
+Jelly Brawl V 1.5.3
+
+- "Inverted" challenge round Removed
+- "Inflated" challenge round Added
+- Bonk Hammer making no sound on Clients Fixed
+- Fixed players quitting early breaking matches
+- Fixed first click going previous direction in Online
+- Minor Fixes for null pointers in Camera follow and player collision
+
+-------------------------------------------
+
 Jelly Brawl V 1.5.2
 
 - "Gooey" challenge round changed to "Edgy"
