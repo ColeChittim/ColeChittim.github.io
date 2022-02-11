@@ -1,3 +1,26 @@
+Jelly Brawl V 1.5.4
+
+- Added opening cutscene to Hit & Run
+- 2 New Destructible Tiles in level editor
+- Fix tiles in custom maps losing collision
+- Leaderboards added to profile page (full game only)
+- Steam deck support for runtime loading and cloud save
+- Big Performance and Memory improvements
+- Improved shader loading on game start (less blue pop in)
+- Added improved region select
+- Camera vertical limit raised for large stages
+- Launch is weaker but can be used for the round entirely
+- Fix car rings not being properly synced in Hit & Run
+- Stage tweaks and fixes for sprinning platforms and walls
+- New startup sequence (Darkmode)
+- Updated AI gamertags 
+- Fix able to makes buttons to change host player color on join
+- Fix returing to lobby spawns extra player models
+- Profanity filter applied to in game leaderbaords
+- Ultrawide fixes for level editor transition and profile page
+
+-------------------------------------------
+
 Jelly Brawl V 1.5.3
 
 - "Inverted" challenge round Removed
