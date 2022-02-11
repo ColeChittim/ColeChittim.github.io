@@ -11,12 +11,12 @@ Jelly Brawl V 1.5.4
 - Camera vertical limit raised for large stages
 - Launch is weaker but can be used for the round entirely
 - Fix car rings not being properly synced in Hit & Run
-- Stage tweaks and fixes for sprinning platforms and walls
+- Stage tweaks and fixes for spinning platforms and walls
 - New startup sequence (Darkmode)
 - Updated AI gamertags 
 - Fix able to makes buttons to change host player color on join
-- Fix returing to lobby spawns extra player models
-- Profanity filter applied to in game leaderbaords
+- Fix returning to lobby spawns extra player models
+- Profanity filter applied to in game leaderboards
 - Ultrawide fixes for level editor transition and profile page
 
 -------------------------------------------
