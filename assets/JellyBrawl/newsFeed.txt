@@ -1,3 +1,34 @@
+Jelly Brawl V 1.5.5
+
+- Added Cannon, Bomb, Saw powerups
+- New Destructible and Power up Tiles in level editor
+- Fix private toggle in match settings online
+- Fix crowd avalanche visual and network issues
+- Fix Playing anything then playing custom breaks level loading in that mode
+- Pumpkin face (Originally launch week exclusive) now available in October
+- Bonk Hammer more aggressive
+- Fix image effect issue if two challenge rounds are played back to back
+- Resetting position in Race, Custom Preview removes powerups
+- Ramps added to quadrant race to jump lasers
+- Added more safety rail to stages
+- Fixed Button Activated Gates
+- Added solo leaderboard (Full game only)
+- Add the bomb powerup to explosive pile for Easter egg (Hit and Run)
+- Movement balancing and clamping
+- Classic AI Improvements
+- New challenges
+- Fix UI Navigation issue in race local multiplayer select
+- Fix toggle coms 
+- Fix broken wall collisions on boss diamond stages
+- Improved visibility on guide arrow in hit and run
+- Update text on level up and end screen UI to TextMeshPro for improved resolution
+- Fix swapping from solo to local multiplayer causes "Press enter to start to disappear"
+- Lower causing chaos achievement to 2500 rounds
+- Add prompt to local player select on how to add other players
+- Fix direction arrow being visible after death
+
+-------------------------------------------
+
 Jelly Brawl V 1.5.4
 
 - Added opening cutscene to Hit & Run
