@@ -1,3 +1,85 @@
+Jelly Brawl 1.5.9
+
+- Added Cross Platform Accounts (Leaderboards, Cross Save, etc.)
+- Change News to use Playfab (Full game)
+- Fix raycast targets on the on screen keyboard
+- Added new keys to on screen keyboard
+- Added Billboard to Opening Cutscene
+- Change "Discord badge level" to "Challenges Completed" in lobbys
+- Added Dynamic Scaling support for resolution (Can be enabled in setting for big performance boost)
+- Added If you complete 5 challenges Unlock Discord face
+- Added If you complete 15 challenges Unlock Discord Stage
+- Added If you complete 50 challenges Unlock Discord face
+- Added edit display name to Profile page (Full game only)
+- Fix for UI/Text rendering on Mac OS and Linux based platforms (includes Android)
+- Updated terms of service
+
+-------------------------------------------
+
+Jelly Brawl 1.5.8
+
+- Fix unreachable coins in Park (Hit & Run)
+- Added destructibles to Races
+- New Classic Level
+- Fix some Hit & Run Objects spawning in correctly
+- Added On Fire Warning
+- Fire kills you slower
+- New Particle and Post Processing Effects
+- Networking Fixes
+- Playfab Added (Cross Platform Leaderboards and Cross Platform Cloud save coming soon)
+(Edit) Patch:
+- Fix for Platforms without Vulcan support trying to use Vulcan
+- Fix King jelly rotate correctly
+- Fix King Jelly Speed being frame dependent
+- Fix hovering over buttons
+
+-------------------------------------------
+
+Jelly Brawl 1.5.7
+
+- New Hit & Run Stages
+- Rendering Improvements (Vulkan Support)
+- HBAO Performance
+- Motion Blur
+- Color Correction Adjustment
+- New analytics platform (Unity Analytics - Gaming Services) + Removed "Game Analytics"
+- Fix Cars despawn early (Hit & Run)
+- Hit & Run Stages Updated with Scenery and Props
+- Updated Water shader
+- Fix slime colors wrong on first street (Hit and Run)
+- Make it so first frame on startup is the jelly loading screen (Xbox and other slower devices)
+- Fix Cannon tile broken if you place in editor and then change it, the canon remains.
+- Fix was doing 4 boss waves instead of 3 in Hit and Run
+- Add explosions to opening cutscene (Hit & Run)
+- Fix losing xbox controller focus on menu Start (JB Classic)
+- Add motion blur toggle in settings
+- Swapped Discord button and Profile Button (to more easily hide the discord button on non-pc platforms)
+- Disable the water tutorial in classic
+- Disabled Demo Message every other match (Classic)
+- Water added to Races
+- Added Water to some Classic stages
+
+-------------------------------------------
+
+Jelly Brawl 1.5.6
+
+- Added more weight to player so movement more controlled
+- Make all modes available from start (FULL GAME)
+- New Stage Unlocks added
+- Fixed fog rendering
+- Changes made to existing stages
+- Stage decoration and theming added
+- Hit & Run no longer perma death in coop
+- Falling in water damages jelly (HIt & Run)
+- Change "Control" boss round to be based on timers for each player so we don't have the weird counting
+- Fix being able to disable all boss rounds and have boss only enabled
+- Fix triggers on Xbox One controllers player select face nav
+- Fix shield flashing when collected
+- Fix challenge progress tick sfx
+- VR headset face added and replaces Astro face unlock
+
+-------------------------------------------
+
 Jelly Brawl V 1.5.5
 
 - Added Cannon, Bomb, Saw powerups
@@ -95,64 +177,5 @@ Jelly Brawl V 1.5
 - Removed Dependencies and Improved Stability
 - Smaller Size on Disk
 - Many Small Bug Fixes 
-
--------------------------------------------
-
-Jelly Brawl V 1.4.4 
-
-- Fixed Hit & Run slime
-- Fixed Hit & Run cars spawning incorrectly
-- Added destructible environments to Hit & Run
-- Adjusted camera movement in classic
-- Fixed Destructible in online
-- Other Small Bug fixes
-
--------------------------------------------
-
-Jelly Brawl V 1.4.3  
-
-- Added daily exp reward!
-- Destructible props added to stages!
-- 3 New Achievements!
-- Tutorial and classic pop ups updated!
-- 2 New Challenge Round types (Retro and Gooey)!
-- Challenge Rounds more common
-- 5 New Levels (Max level cap level 40)
-- New particles and sounds
-- New Jelly Brawl profile section showing current level progress and upcoming unlocks
-- Added Jelly Brawl news section
-- Bug fixes and more!
-
--------------------------------------------
-
-Jelly Brawl V 1.4.2  
-
-- Fixed issue with local player select showing online player select
-- Fixed graphical issues in opening cinematic
-- Updated challenges UI
-
--------------------------------------------
-
-Jelly Brawl V 1.4.1
-I'm back to roll out multiple new updates that aim to overhaul Jelly Brawl's visuals and content!
-
-I've Overhauled the Networking!
-Many have commented on the networking being subpar and I've been aware of this. Over the past couple months I actually have had the chance to work on a lot of networking based projects and have been able to take what I've learned and apply it to Jelly Brawl's networking. With this update you should see reduced lag online and proper authoritative servers with rollback like a true fighting game. 
-
-I've Also Continued the Total UI Overhaul
-With a more clean design to the online lobby showing only your player select and other players to the right of you
-
-Bug Fixes
-Plenty of fixes as well as performance improvements have been implemented such as controller inversion working online and the resolution select not containing duplicates!
-
-As I said, more is yet to come including:
-- More UI redesigns
-- More unlocks
-- And possibly a new platform to play Jelly Brawl on!
-
-I'll have more to share with you on these soon. 
-Stay tuned! I've been busy but Jelly Brawl is back baby!
-
-- Cole
 
 -------------------------------------------
