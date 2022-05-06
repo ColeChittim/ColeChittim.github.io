@@ -13,6 +13,10 @@ Jelly Brawl 1.5.9
 - Added edit display name to Profile page (Full game only)
 - Fix for UI/Text rendering on Mac OS and Linux based platforms (includes Android)
 - Updated terms of service
+- Added toggle for cam damage effects
+- Optimized save algorithm 
+- Fix raycast targets on lobby buttons and settings
+- Fix HBAO not updating in menu (Low fps in menu)
 
 -------------------------------------------
 
