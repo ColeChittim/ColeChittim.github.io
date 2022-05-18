@@ -1,3 +1,22 @@
+Jelly Brawl 1.5.9.1
+
+- Fix lower anti aliasing default
+- Fix dynamic res and other toggles controller access
+- Disabled HDR support (Until proper support can be provided)
+- Fix Profile buttons controller accessible
+- Fix numbers in on screen keyboard not being controller accessible from below
+- Change enter not submit on keyboard
+- Fix playing tutorial with multiple players breaks loading into game (just don't load into game immediately and go to menu)
+- Add confetti particle to Level up and Challenge Complete
+- Remove powerup and non-useful tutorials, shorten the boss round tutorials
+- Fix boss round and level up UI overlap (choose the level up UI)
+- Add V Sync toggle
+- Make invert mouse, just invert in general
+- Removed Quality Jelly Toggle (Automatically adjusted)
+- Analytics tracking removed, and replaced with an aggregate solution. Consent warning moved to account creation and modified for clarity
+
+-------------------------------------------
+
 Jelly Brawl 1.5.9
 
 - Added Cross Platform Accounts (Leaderboards, Cross Save, etc.)
